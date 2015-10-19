@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1ds-Sb-SB7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -131,15 +130,7 @@
                                     <action selector="stopPlaying:" destination="5Np-3l-2ZG" eventType="touchUpInside" id="LMX-yR-9Nh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3m-Q1-eJU">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" image="chipmunkButton"/>
-                                <connections>
-                                    <action selector="playChipmunkAudio:" destination="5Np-3l-2ZG" eventType="touchUpInside" id="ndG-rF-9F6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkQ-Cl-3tu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkQ-Cl-3tu" userLabel="darthVadderButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="darthvaderButton"/>
@@ -147,40 +138,74 @@
                                     <action selector="playDarthvaderAudio:" destination="5Np-3l-2ZG" eventType="touchUpInside" id="zmA-w3-u3a"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aei-Iw-yCh" userLabel="reverseButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="reverseButton"/>
+                                <connections>
+                                    <action selector="playReverseAudio:" destination="5Np-3l-2ZG" eventType="touchUpInside" id="LMS-tc-hIv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsN-Vf-p2k" userLabel="echoButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="echoButton"/>
+                                <connections>
+                                    <action selector="playEchoAudio:" destination="5Np-3l-2ZG" eventType="touchUpInside" id="I7B-MB-T8Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3m-Q1-eJU" userLabel="chimpMunkButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="chipmunkButton"/>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="5Np-3l-2ZG" eventType="touchUpInside" id="ndG-rF-9F6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QhW-ub-pZU" firstAttribute="centerX" secondItem="7Vi-bR-ZWq" secondAttribute="centerX" id="El0-AM-LOc"/>
-                            <constraint firstItem="EeI-TA-dMQ" firstAttribute="top" secondItem="h0J-wA-cDv" secondAttribute="bottom" constant="50" id="FMc-r3-8Et"/>
-                            <constraint firstItem="g3m-Q1-eJU" firstAttribute="leading" secondItem="7Vi-bR-ZWq" secondAttribute="leadingMargin" constant="25" id="HgQ-9k-MZ4"/>
-                            <constraint firstItem="g3m-Q1-eJU" firstAttribute="top" secondItem="EeI-TA-dMQ" secondAttribute="bottom" constant="54" id="J6o-rH-6dQ"/>
-                            <constraint firstItem="4kg-ax-ABB" firstAttribute="top" secondItem="h0J-wA-cDv" secondAttribute="bottom" constant="50" id="MiO-yv-h6K"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wkQ-Cl-3tu" secondAttribute="trailing" constant="25" id="RFZ-2E-zD2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4kg-ax-ABB" secondAttribute="trailing" constant="25" id="S84-rL-HHG"/>
-                            <constraint firstItem="EeI-TA-dMQ" firstAttribute="leading" secondItem="7Vi-bR-ZWq" secondAttribute="leadingMargin" constant="25" id="Z4h-8r-5Rb"/>
-                            <constraint firstItem="ptB-sM-L7z" firstAttribute="top" secondItem="QhW-ub-pZU" secondAttribute="bottom" constant="63" id="eTU-hj-9Bb"/>
-                            <constraint firstItem="wkQ-Cl-3tu" firstAttribute="top" secondItem="4kg-ax-ABB" secondAttribute="bottom" constant="54" id="t9j-dd-aFI"/>
+                            <constraint firstItem="EeI-TA-dMQ" firstAttribute="top" secondItem="h0J-wA-cDv" secondAttribute="bottom" constant="30" id="FMc-r3-8Et"/>
+                            <constraint firstItem="g3m-Q1-eJU" firstAttribute="leading" secondItem="7Vi-bR-ZWq" secondAttribute="leadingMargin" constant="30" id="HgQ-9k-MZ4"/>
+                            <constraint firstItem="g3m-Q1-eJU" firstAttribute="top" secondItem="EeI-TA-dMQ" secondAttribute="bottom" constant="40" id="J6o-rH-6dQ"/>
+                            <constraint firstItem="aei-Iw-yCh" firstAttribute="top" secondItem="g3m-Q1-eJU" secondAttribute="bottom" constant="40" id="MYk-9R-YSb"/>
+                            <constraint firstItem="4kg-ax-ABB" firstAttribute="top" secondItem="h0J-wA-cDv" secondAttribute="bottom" constant="30" id="MiO-yv-h6K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wkQ-Cl-3tu" secondAttribute="trailing" constant="30" id="RFZ-2E-zD2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4kg-ax-ABB" secondAttribute="trailing" constant="30" id="S84-rL-HHG"/>
+                            <constraint firstItem="EeI-TA-dMQ" firstAttribute="leading" secondItem="7Vi-bR-ZWq" secondAttribute="leadingMargin" constant="30" id="Z4h-8r-5Rb"/>
+                            <constraint firstItem="ptB-sM-L7z" firstAttribute="top" secondItem="QhW-ub-pZU" secondAttribute="bottom" constant="30" id="eTU-hj-9Bb"/>
+                            <constraint firstItem="aei-Iw-yCh" firstAttribute="leading" secondItem="7Vi-bR-ZWq" secondAttribute="leadingMargin" constant="30" id="g0E-NZ-0Yd"/>
+                            <constraint firstItem="tsN-Vf-p2k" firstAttribute="top" secondItem="wkQ-Cl-3tu" secondAttribute="bottom" constant="40" id="gJd-4Y-lEc"/>
+                            <constraint firstItem="wkQ-Cl-3tu" firstAttribute="top" secondItem="4kg-ax-ABB" secondAttribute="bottom" constant="40" id="t9j-dd-aFI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tsN-Vf-p2k" secondAttribute="trailing" constant="30" id="xFQ-LE-UAe"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="EeI-TA-dMQ"/>
                                 <exclude reference="4kg-ax-ABB"/>
                                 <exclude reference="QhW-ub-pZU"/>
-                                <exclude reference="g3m-Q1-eJU"/>
                                 <exclude reference="wkQ-Cl-3tu"/>
+                                <exclude reference="aei-Iw-yCh"/>
+                                <exclude reference="tsN-Vf-p2k"/>
+                                <exclude reference="g3m-Q1-eJU"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="eTU-hj-9Bb"/>
-                                <exclude reference="MiO-yv-h6K"/>
-                                <exclude reference="S84-rL-HHG"/>
                                 <exclude reference="FMc-r3-8Et"/>
                                 <exclude reference="Z4h-8r-5Rb"/>
-                                <exclude reference="El0-AM-LOc"/>
                                 <exclude reference="HgQ-9k-MZ4"/>
                                 <exclude reference="J6o-rH-6dQ"/>
+                                <exclude reference="MiO-yv-h6K"/>
+                                <exclude reference="S84-rL-HHG"/>
                                 <exclude reference="RFZ-2E-zD2"/>
                                 <exclude reference="t9j-dd-aFI"/>
+                                <exclude reference="MYk-9R-YSb"/>
+                                <exclude reference="g0E-NZ-0Yd"/>
+                                <exclude reference="gJd-4Y-lEc"/>
+                                <exclude reference="xFQ-LE-UAe"/>
+                                <exclude reference="El0-AM-LOc"/>
+                                <exclude reference="eTU-hj-9Bb"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -188,20 +213,26 @@
                                 <include reference="EeI-TA-dMQ"/>
                                 <include reference="4kg-ax-ABB"/>
                                 <include reference="QhW-ub-pZU"/>
-                                <include reference="g3m-Q1-eJU"/>
                                 <include reference="wkQ-Cl-3tu"/>
+                                <include reference="aei-Iw-yCh"/>
+                                <include reference="tsN-Vf-p2k"/>
+                                <include reference="g3m-Q1-eJU"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="eTU-hj-9Bb"/>
-                                <include reference="MiO-yv-h6K"/>
-                                <include reference="S84-rL-HHG"/>
                                 <include reference="FMc-r3-8Et"/>
                                 <include reference="Z4h-8r-5Rb"/>
-                                <include reference="El0-AM-LOc"/>
                                 <include reference="HgQ-9k-MZ4"/>
                                 <include reference="J6o-rH-6dQ"/>
+                                <include reference="MiO-yv-h6K"/>
+                                <include reference="S84-rL-HHG"/>
                                 <include reference="RFZ-2E-zD2"/>
                                 <include reference="t9j-dd-aFI"/>
+                                <include reference="MYk-9R-YSb"/>
+                                <include reference="g0E-NZ-0Yd"/>
+                                <include reference="gJd-4Y-lEc"/>
+                                <include reference="xFQ-LE-UAe"/>
+                                <include reference="El0-AM-LOc"/>
+                                <include reference="eTU-hj-9Bb"/>
                             </mask>
                         </variation>
                     </view>
@@ -233,8 +264,10 @@
     <resources>
         <image name="chipmunkButton" width="100" height="100"/>
         <image name="darthvaderButton" width="100" height="100"/>
+        <image name="echoButton" width="100" height="100"/>
         <image name="fastButton" width="100" height="100"/>
         <image name="microphoneButton" width="100" height="100"/>
+        <image name="reverseButton" width="100" height="100"/>
         <image name="slowButton" width="100" height="100"/>
         <image name="stopButton" width="50" height="50"/>
     </resources>

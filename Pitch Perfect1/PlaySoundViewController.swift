@@ -77,6 +77,15 @@ class PlaySoundViewController: UIViewController {
         
     }
     
+    @IBAction func playReverseAudio(sender: UIButton) {
+        
+        
+    }
+    
+    @IBAction func playEchoAudio(sender: UIButton) {
+    }
+    
+    
     func playAudioWithVariablePitch(pitch: Float){
         audioPlayer.stop()
         audioEngine.stop()
