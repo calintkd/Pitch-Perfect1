@@ -84,7 +84,7 @@ class PlaySoundViewController: UIViewController {
     
     
     @IBAction func playEchoAudio(sender: UIButton) {
-        playAudioWithVariableEcho(0.3)
+        playAudioWithVariableEcho(0.55)
     }
     
     
