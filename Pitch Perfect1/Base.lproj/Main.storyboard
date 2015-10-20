@@ -138,12 +138,12 @@
                                     <action selector="playDarthvaderAudio:" destination="5Np-3l-2ZG" eventType="touchUpInside" id="zmA-w3-u3a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aei-Iw-yCh" userLabel="reverseButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aei-Iw-yCh" userLabel="reverbButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" image="reverseButton"/>
+                                <state key="normal" image="reverbButton"/>
                                 <connections>
-                                    <action selector="playReverseAudio:" destination="5Np-3l-2ZG" eventType="touchUpInside" id="LMS-tc-hIv"/>
+                                    <action selector="playReverbAudio:" destination="5Np-3l-2ZG" eventType="touchUpInside" id="9mn-GR-SXg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsN-Vf-p2k" userLabel="echoButton">
@@ -267,7 +267,7 @@
         <image name="echoButton" width="100" height="100"/>
         <image name="fastButton" width="100" height="100"/>
         <image name="microphoneButton" width="100" height="100"/>
-        <image name="reverseButton" width="100" height="100"/>
+        <image name="reverbButton" width="100" height="100"/>
         <image name="slowButton" width="100" height="100"/>
         <image name="stopButton" width="50" height="50"/>
     </resources>

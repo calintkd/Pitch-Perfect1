@@ -77,12 +77,14 @@ class PlaySoundViewController: UIViewController {
         
     }
     
-    @IBAction func playReverseAudio(sender: UIButton) {
-        
-        
+
+    @IBAction func playReverbAudio(sender: UIButton) {
+        playAudioWithVariableReverb(65,preset: .LargeChamber)
     }
     
+    
     @IBAction func playEchoAudio(sender: UIButton) {
+        playAudioWithVariableEcho(0.3)
     }
     
     
@@ -106,6 +108,49 @@ class PlaySoundViewController: UIViewController {
 
         audioPlayerNode.play()
 }
+    
+    func playAudioWithVariableReverb(reverb: Float, preset: AVAudioUnitReverbPreset){
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        let audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        let changeReverbEffect = AVAudioUnitReverb()
+        changeReverbEffect.loadFactoryPreset(preset)
+        changeReverbEffect.wetDryMix = reverb
+        audioEngine.attachNode(changeReverbEffect)
+        
+        audioEngine.connect(audioPlayerNode, to: changeReverbEffect, format: nil)
+        audioEngine.connect(changeReverbEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        try! audioEngine.start()
+        
+        audioPlayerNode.play()
+    }
+
+    func playAudioWithVariableEcho(delay: NSTimeInterval){
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        let audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        let changeEchoEffect = AVAudioUnitDelay()
+        changeEchoEffect.delayTime = delay
+        audioEngine.attachNode(changeEchoEffect)
+        
+        audioEngine.connect(audioPlayerNode, to: changeEchoEffect, format: nil)
+        audioEngine.connect(changeEchoEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        try! audioEngine.start()
+        
+        audioPlayerNode.play()
+    }
 
     
     @IBAction func stopPlaying(sender: UIButton) {
